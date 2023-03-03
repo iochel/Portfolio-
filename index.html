@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in and Register Page</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+        <div class="container">
+            <div class="form-box">
+                <h1 id="title">Register</h1>
+                <form>
+                    <div class="input-group">
+                        <div class="input-field" id="nameField">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" placeholder="Name" />
+                        </div>
+
+                        <div class="input-group">
+                            <div class="input-field">
+                                <i class="fa-solid fa-envelope"></i>
+                                <input type="email" placeholder="Email" />
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <div class="input-field">
+                                <i class="fa-solid fa-lock"></i>
+                                <input type="password" placeholder="Password" />
+                            </div>
+                            <p>Forgot Password <a href="#">Click Here!</a></p>
+                        </div>
+                    </div>
+                    <div class="btn-field">
+                        <button type="button" id="signupBtn">Sign Up</button>
+                        <button type="button" id="signinBtn" class="disable">Sign In</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <script>
+
+            let signupBtn = document.getElementById("signupBtn");
+            let signinBtn = document.getElementById("signinBtn");
+            let nameField = document.getElementById("nameField");
+            let title = document.getElementById("title");
+
+            signinBtn.onclick = function () {
+                nameField.style.maxHeight = "0px";
+                title.innerHTML = "Log In";
+                signupBtn.classList.remove("disable");
+                signinBtn.classList.add("disable");
+            }
+
+
+
+        </script>
+
+
+</body>
+</html>
